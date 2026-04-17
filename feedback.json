@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "name": "Ayush Mistry",
+        "email": "ayushmistry0054@gmail.com",
+        "phone": "7622831980",
+        "description": "Jaimin Parmar is really impressive video editor . The transitions are smooth, the cuts match the timing perfectly, and the overall flow keeps the video engaging from start to finish. The music syncs well with the visuals, which makes the whole video more enjoyable to watch. The color grading and effects are balanced and not overdone, giving the video a clean and professional feel. Great job on the editing!",
+        "status": "approved",
+        "created_at": "2026-03-04 09:53:51"
+    },
+    {
+        "id": 2,
+        "name": "Rhen Sidhu",
+        "email": "rhensidhu7@gmail.com",
+        "phone": "9316442877",
+        "description": "Amazing editing skills! The transitions, music sync, and overall flow made my video look very professional. Highly recommended for anyone looking for creative edits.",
+        "status": "approved",
+        "created_at": "2026-03-04 10:32:58"
+    },
+    {
+        "id": 3,
+        "name": "Akshar Gandhi",
+        "email": "gandhigiteshgc@gmail.com",
+        "phone": "09427089160",
+        "description": "One of the best editors I’ve worked with. Attention to detail and storytelling through editing is impressive. Will definitely work again.",
+        "status": "approved",
+        "created_at": "2026-03-04 10:34:54"
+    },
+    {
+        "id": 4,
+        "name": "Dhruv Sonvane",
+        "email": "dhruvsonvane8401@gmail.com",
+        "phone": "9510914367",
+        "description": "“Fantastic editing work! The pacing, transitions, and visual effects are perfectly aligned. The video looks clean, modern, and very engaging. I especially liked the color correction and smooth scene shifts. Great job overall.”",
+        "status": "approved",
+        "created_at": "2026-03-04 11:34:17"
+    }
+]

@@ -1,0 +1,313 @@
+# 📋 Connection & Credentials Reference
+
+## 🔐 Admin Login Credentials
+
+```
+Username: admin
+Password: admin123
+Login URL: https://yourname.infinityfreeapp.com/login.php
+```
+
+---
+
+## 🗄️ Database Information
+
+### Local Development
+```
+Database Name:    editing
+Database Host:    localhost
+Database User:    root
+Database Pass:    (empty)
+Port:             3306
+```
+
+### Hosting (filemanager.ai / InfinityFree)
+```
+Database Name:    if0_123456_editning   ← Replace numbers with yours
+Database Host:    sqlXXX.infinityfree.com ← Replace XXX with yours
+Database User:    if0_123456_admin       ← Replace numbers with yours
+Database Pass:    [Enter the one you created]
+Port:             3306
+```
+
+---
+
+## 📁 Important Files & Their Purpose
+
+### Authentication
+- **login.php** - Admin login page
+- **pass.php** - Password hashing functionality
+- **logout.php** - Logout functionality
+
+### Database Management
+- **db-functions.php** - ALL JSON file operations
+  - `addBooking()` - Save booking to JSON
+  - `getBookings()` - Fetch all bookings
+  - `addContactMessage()` - Save contact message to JSON
+  - `getContactMessages()` - Fetch all messages
+  - `getBookingCount()` - Count bookings
+  - `getContactMessageCount()` - Count messages
+
+- **setup_database.php** - Database initialization (runs once)
+
+### Admin Pages
+- **dashboard.php** - Main admin dashboard
+- **bookings_total.php** - View all bookings (JSON source)
+- **ContectUs_total.php** - View all contact messages (JSON source)
+- **manage_gallery.php** - Manage gallery items
+- **manage_gallery_secure.php** - Secure gallery management
+
+### Public Pages
+- **Home.php** - Homepage
+- **about.php** - About page
+- **book.php** - Booking form (saves to bookings.json)
+- **contact.php** - Contact form (saves to contact_messages.json)
+- **gallary.php** - Gallery display
+- **offer.php** - Offers/pricing page
+- **index.php** - Portal redirect
+
+---
+
+## 📄 JSON File Locations & Formats
+
+### bookings.json
+**Location:** Root directory
+**Auto-created:** First booking submission
+**Content:**
+```json
+[
+  {
+    "id": 1,
+    "full_name": "John Doe",
+    "email": "john@example.com",
+    "phone": "1234567890",
+    "service": "video",
+    "message": "Custom message",
+    "booking_date": "2025-12-25",
+    "booking_time": "14:30:00",
+    "created_at": "2025-12-20 10:30:45"
+  }
+]
+```
+**Permissions:** 644
+
+### contact_messages.json
+**Location:** Root directory
+**Auto-created:** First contact form submission
+**Content:**
+```json
+[
+  {
+    "id": 1,
+    "name": "Jane Smith",
+    "email": "jane@example.com",
+    "message": "Hello, I have a question...",
+    "created_at": "2025-12-20 10:30:45"
+  }
+]
+```
+**Permissions:** 644
+
+### gallery.json
+**Location:** Root directory
+**Content:** Array of gallery items with media details
+**Permissions:** 644
+
+### offers.json
+**Location:** Root directory
+**Content:** Array of service offers and pricing
+**Permissions:** 644
+
+---
+
+## 🔗 Important URLs
+
+### Local Development
+```
+Homepage:           http://localhost/editing_project/Home.php
+Admin Login:        http://localhost/editing_project/login.php
+Dashboard:          http://localhost/editing_project/dashboard.php
+Booking Form:       http://localhost/editing_project/book.php
+Contact Form:       http://localhost/editing_project/contact.php
+Gallery:            http://localhost/editing_project/gallary.php
+```
+
+### Production Hosting
+```
+Homepage:           https://yourname.infinityfreeapp.com/Home.php
+Admin Login:        https://yourname.infinityfreeapp.com/login.php
+Dashboard:          https://yourname.infinityfreeapp.com/dashboard.php
+Booking Form:       https://yourname.infinityfreeapp.com/book.php
+Contact Form:       https://yourname.infinityfreeapp.com/contact.php
+Gallery:            https://yourname.infinityfreeapp.com/gallary.php
+phpMyAdmin:         https://yourname.infinityfreeapp.com/phpmyadmin
+```
+
+---
+
+## 🗝️ Default Credentials
+
+### Admin Panel
+```
+Username:  admin
+Password:  admin123
+```
+
+### To Reset Password (in hosting phpMyAdmin)
+```sql
+UPDATE admins 
+SET password = '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi' 
+WHERE username = 'admin';
+```
+(This sets password back to: admin123)
+
+---
+
+## ⚙️ Configuration Files
+
+### db-functions.php
+- No configuration needed
+- Automatically uses JSON files in root directory
+- Handles all CRUD operations for bookings and contacts
+
+### login.php
+- No configuration file needed for local
+- For hosting, update database credentials if needed
+- Uses MySQL `admins` table only
+
+### setup_database.php
+- Runs once during initial setup
+- Creates `admins` table
+- Inserts default admin user
+
+---
+
+## 📊 Database Schema
+
+### MySQL Database: `editning`
+
+Only ONE table (minimal MySQL usage):
+
+```sql
+CREATE TABLE admins (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+```
+
+**Why Only One Table?**
+- Security: Password hashing in MySQL
+- Simplicity: JSON for flexible data
+- Backup: Easy JSON file backups
+- Scalability: Mix best of both worlds
+
+---
+
+## 🔄 Data Flow
+
+### Booking Submission
+```
+User fills form in book.php
+    ↓
+PHP validates data
+    ↓
+db-functions.php → addBooking()
+    ↓
+Data saved to bookings.json
+    ↓
+Success message shown to user
+```
+
+### Contact Form Submission
+```
+User fills form in contact.php
+    ↓
+PHP validates data
+    ↓
+db-functions.php → addContactMessage()
+    ↓
+Data saved to contact_messages.json
+    ↓
+Success message shown to user
+```
+
+### Admin Login
+```
+User enters credentials in login.php
+    ↓
+PHP queries MySQL admins table
+    ↓
+password_verify() checks password hash
+    ↓
+Session created
+    ↓
+Admin redirected to dashboard.php
+```
+
+### View Bookings (Admin)
+```
+Admin navigates to bookings_total.php
+    ↓
+Session verification (must be logged in)
+    ↓
+db-functions.php → getBookings()
+    ↓
+Reads bookings.json
+    ↓
+Displays table with all bookings
+```
+
+---
+
+## 🛡️ Security Notes
+
+- ✅ Passwords hashed with bcrypt
+- ✅ Sessions used for admin authentication
+- ✅ Form inputs sanitized with htmlspecialchars()
+- ✅ Email validation on submitted forms
+- ✅ File permissions set correctly (644 for .json)
+
+---
+
+## 🚨 If Something Goes Wrong
+
+### A) Can't Login to Admin
+1. Check: Is `admins` table created?
+2. Check: Is default user inserted?
+3. Solution: Run `hosting-setup.sql` again
+
+### B) Booking/Contact Forms Not Working
+1. Check: Do bookings.json and contact_messages.json exist?
+2. Check: Are file permissions 644?
+3. Check: Is db-functions.php in root directory?
+4. Solution: Create empty JSON files and set permissions
+
+### C) Database Connection Error
+1. Check: Are database credentials correct?
+2. Check: Is database host correct? (not localhost for hosting)
+3. Check: Is database existing? (Run hosting-setup.sql)
+4. Solution: Verify all 4 values match hosting panel
+
+---
+
+## 📞 Support Checklist
+
+Keep these handy:
+
+- [ ] Database name from hosting panel
+- [ ] Database host from hosting panel
+- [ ] Database username from hosting panel
+- [ ] Database password you created
+- [ ] Admin username (admin)
+- [ ] Admin password (admin123)
+- [ ] Site domain/URL
+- [ ] FTP credentials (if needed)
+- [ ] Hosting support email
+
+---
+
+**Last Updated:** March 1, 2026
+**Status:** Ready for Production ✅
+

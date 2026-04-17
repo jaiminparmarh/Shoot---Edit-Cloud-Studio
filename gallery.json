@@ -1,0 +1,309 @@
+[
+    {
+        "id": 1,
+        "title": "Jwelery",
+        "type": "video",
+        "url": "uploads/videos/1.mp4",
+        "videoCategory": [
+            "business",
+            "insta_reels"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Foxplay",
+        "type": "video",
+        "url": "uploads/videos/2.2.mp4",
+        "videoCategory": [
+            "business",
+            "insta_reels",
+            "event_edits"
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Foxplay",
+        "type": "video",
+        "url": "uploads/videos/3.mp4",
+        "videoCategory": [
+            "business",
+            "insta_reels",
+            "event_edits"
+        ]
+    },
+    {
+        "id": 4,
+        "title": "GH Patel",
+        "type": "video",
+        "url": "uploads/videos/5.2.mp4",
+        "videoCategory": [
+            "business",
+            "insta_reels",
+            "event_edits"
+        ]
+    },
+    {
+        "id": 5,
+        "title": "Aayush",
+        "type": "video",
+        "url": "uploads/videos/6.2.mp4",
+        "videoCategory": [
+            "cinematic",
+            "insta_reels",
+            "music_based"
+        ]
+    },
+    {
+        "id": 6,
+        "title": "Aayush",
+        "type": "video",
+        "url": "uploads/videos/6.5.mp4",
+        "videoCategory": [
+            "cinematic",
+            "insta_reels",
+            "music_based"
+        ]
+    },
+    {
+        "id": 7,
+        "title": "Biker",
+        "type": "video",
+        "url": "uploads/videos/7.2.mp4",
+        "videoCategory": [
+            "cinematic",
+            "insta_reels"
+        ]
+    },
+    {
+        "id": 8,
+        "title": "Udaipur",
+        "type": "video",
+        "url": "uploads/videos/7.6.mp4",
+        "videoCategory": [
+            "cinematic",
+            "insta_reels",
+            "music_based"
+        ]
+    },
+    {
+        "id": 9,
+        "title": "College (MRG)",
+        "type": "video",
+        "url": "uploads/videos/7.mp4",
+        "videoCategory": [
+            "cinematic",
+            "insta_reels",
+            "event_edits"
+        ]
+    },
+    {
+        "id": 10,
+        "title": "Priyanshi",
+        "type": "video",
+        "url": "uploads/videos/9.mp4",
+        "videoCategory": [
+            "business",
+            "insta_reels"
+        ]
+    },
+    {
+        "id": 11,
+        "title": "Krishna",
+        "type": "video",
+        "url": "uploads/videos/10.7.mp4",
+        "videoCategory": [
+            "cinematic",
+            "insta_reels"
+        ]
+    },
+    {
+        "id": 12,
+        "title": "Dhruv (Visarjan)",
+        "type": "video",
+        "url": "uploads/videos/10.5.mp4",
+        "videoCategory": [
+            "insta_reels",
+            "event_edits"
+        ]
+    },
+    {
+        "id": 13,
+        "title": "Bikers(SVIT)",
+        "type": "video",
+        "url": "uploads/videos/13.mp4",
+        "videoCategory": [
+            "business",
+            "cinematic",
+            "insta_reels",
+            "event_edits"
+        ]
+    },
+    {
+        "id": 14,
+        "title": "Color grading (Dog)",
+        "type": "video",
+        "url": "uploads/videos/15.5.mp4",
+        "videoCategory": [
+            "insta_reels"
+        ]
+    },
+    {
+        "id": 15,
+        "title": "Tug of war",
+        "type": "video",
+        "url": "uploads/videos/18.mp4",
+        "videoCategory": [
+            "cinematic",
+            "insta_reels",
+            "event_edits"
+        ]
+    },
+    {
+        "id": 16,
+        "title": "College (Black day)",
+        "type": "video",
+        "url": "uploads/videos/19.mp4",
+        "videoCategory": [
+            "cinematic",
+            "insta_reels",
+            "event_edits"
+        ]
+    },
+    {
+        "id": 17,
+        "title": "Uno",
+        "type": "video",
+        "url": "uploads/videos/20.mp4",
+        "videoCategory": [
+            "cinematic",
+            "insta_reels",
+            "event_edits"
+        ]
+    },
+    {
+        "id": 18,
+        "title": "All days mix",
+        "type": "video",
+        "url": "uploads/videos/22.mp4",
+        "videoCategory": [
+            "cinematic",
+            "insta_reels",
+            "event_edits"
+        ]
+    },
+    {
+        "id": 19,
+        "title": "Music Prince",
+        "type": "video",
+        "url": "uploads/videos/24.2.mp4",
+        "videoCategory": [
+            "cinematic",
+            "insta_reels",
+            "music_based"
+        ]
+    },
+    {
+        "id": 20,
+        "title": "Priyanshi",
+        "type": "video",
+        "url": "uploads/videos/27.mp4",
+        "videoCategory": [
+            "business",
+            "cinematic",
+            "insta_reels"
+        ]
+    },
+    {
+        "id": 21,
+        "title": "raju Bike",
+        "type": "video",
+        "url": "uploads/videos/28.mp4",
+        "videoCategory": [
+            "insta_reels",
+            "event_edits"
+        ]
+    },
+    {
+        "id": 22,
+        "title": "Train Edit",
+        "type": "video",
+        "url": "uploads/videos/0616-compressed.mp4",
+        "videoCategory": [
+            "cinematic",
+            "insta_reels"
+        ]
+    },
+    {
+        "id": 23,
+        "title": "My desk",
+        "type": "video",
+        "url": "uploads/videos/2024_06_06_14_17_IMG_1921-compressed.mp4",
+        "videoCategory": [
+            "cinematic",
+            "insta_reels"
+        ]
+    },
+    {
+        "id": 24,
+        "title": "karate",
+        "type": "photo",
+        "url": "uploads/photos/Art.png",
+        "videoCategory": []
+    },
+    {
+        "id": 25,
+        "title": "Urban fest",
+        "type": "photo",
+        "url": "uploads/photos/generated-image__17_.png",
+        "videoCategory": []
+    },
+    {
+        "id": 26,
+        "title": "karate",
+        "type": "photo",
+        "url": "uploads/photos/img_1.png",
+        "videoCategory": []
+    },
+    {
+        "id": 27,
+        "title": "Karate",
+        "type": "photo",
+        "url": "uploads/photos/OyFJGeWM.jpg",
+        "videoCategory": []
+    },
+    {
+        "id": 28,
+        "title": "Black Friday",
+        "type": "photo",
+        "url": "uploads/photos/01.png",
+        "videoCategory": []
+    },
+    {
+        "id": 29,
+        "title": "30% off",
+        "type": "photo",
+        "url": "uploads/photos/02.png",
+        "videoCategory": []
+    },
+    {
+        "id": 30,
+        "title": "Mahashiv ratry",
+        "type": "photo",
+        "url": "uploads/photos/03.png",
+        "videoCategory": []
+    },
+    {
+        "id": 31,
+        "title": "Mahashiv ratry",
+        "type": "photo",
+        "url": "uploads/photos/08.png",
+        "videoCategory": []
+    },
+    {
+        "id": 32,
+        "title": "mahashiv ratry",
+        "type": "photo",
+        "url": "uploads/photos/09.png",
+        "videoCategory": []
+    }
+]
