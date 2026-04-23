@@ -324,19 +324,50 @@ body {
 .portal-btn {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  padding: 10px 20px;
-  border-radius: 25px;
+  justify-content: space-between;
+  gap: 14px;
+  min-width: 270px;
+  padding: 12px 16px;
+  border-radius: 14px;
   background: var(--primary-gradient);
   color: white;
   text-decoration: none;
-  font-weight: 500;
-  font-size: 0.85rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.2px;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  box-shadow: 0 10px 24px rgba(42, 111, 136, 0.35);
   position: relative;
   overflow: hidden;
   z-index: 2;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  cursor: pointer;
+}
+
+.portal-btn-main {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.portal-btn-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.22);
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.portal-btn-hint {
+  margin-top: 8px;
+  margin-bottom: 0;
+  font-size: 0.75rem;
+  color: #d4d4d4;
+  text-align: center;
+  letter-spacing: 0.2px;
 }
 
 .portal-btn::before {
@@ -364,7 +395,7 @@ body {
 .client .portal-btn {
   background: linear-gradient(-60deg, #2a6f88ff, #e73c7e);
   color: white;
-  box-shadow: 0 5px 10px rgba(138, 43, 226, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.2), inset 0 0 20px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 14px 28px rgba(42, 111, 136, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.2), inset 0 0 20px rgba(255, 255, 255, 0.1);
   position: relative;
   z-index: 2;
   transition: all 0.3s ease;
@@ -376,13 +407,22 @@ body {
 }
 
 .portal-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px) scale(1.01);
+  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.28);
+}
+
+.portal-btn:hover .portal-btn-arrow {
+  transform: translateX(2px);
+  background: rgba(255, 255, 255, 0.34);
+}
+
+.portal-btn:focus-visible {
+  outline: 3px solid rgba(255, 255, 255, 0.8);
+  outline-offset: 2px;
 }
 
 .portal-btn i {
-  margin-right: 10px;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .client-portal-section {
@@ -527,6 +567,17 @@ body {
   
   .portal-card {
     padding: 30px 20px;
+  }
+
+  .portal-btn {
+    width: 100%;
+    min-width: 0;
+    padding: 11px 14px;
+    font-size: 0.9rem;
+  }
+
+  .portal-btn-hint {
+    font-size: 0.72rem;
   }
 }
 

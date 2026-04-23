@@ -82,10 +82,7 @@ foreach ($videos as $video) {
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
   <div class="container">
     <a class="navbar-brand fw-bold" href="index.php"><i class="fa fa-clapperboard"></i> EditX Studio</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+    <div class="navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item"><a class="nav-link" href="Home.php">Home</a></li>
         <li class="nav-item"><a class="nav-link active" href="gallary.php">Gallery</a></li>
@@ -93,9 +90,6 @@ foreach ($videos as $video) {
         <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
         <li class="nav-item"><a class="nav-link" href="about.php">About</a></li>
         <li class="nav-item"><a class="nav-link" href="feedbacks.php">Feedbacks</a></li>
-      </ul>
-      <ul class="navbar-nav">
-        <li class="nav-item ms-3"><a class="nav-link" href="index.php"><i class="fas fa-user"></i> Portal</a></li>
       </ul>
     </div>
   </div>
@@ -308,7 +302,7 @@ foreach ($videos as $video) {
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-  const animatedElements = document.querySelectorAll('body *:not(nav):not(nav *):not(script):not(style):not(link):not(meta):not(title):not(.floating-shapes):not(.floating-shapes *)');
+  const animatedElements = document.querySelectorAll('[data-aos]');
 
   animatedElements.forEach((el, index) => {
     el.classList.add('reveal-item');
@@ -325,6 +319,12 @@ foreach ($videos as $video) {
   }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
 
   animatedElements.forEach(el => observer.observe(el));
+
+  // Keep the default visible video grid visible immediately on page load.
+  document.querySelectorAll('#videosSection .video-category-section:not(.hidden) .row[data-aos]').forEach(row => {
+    row.classList.add('reveal-in', 'aos-animate');
+    observer.unobserve(row);
+  });
 
   // Image Modal functionality
   const modal = document.getElementById('imageModal');

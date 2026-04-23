@@ -242,6 +242,48 @@ textarea.form-control {
 }
 
 /* Responsive Design */
+@media (max-width: 991px) {
+  .navbar .container {
+    align-items: center;
+  }
+
+  .navbar-collapse {
+    display: block !important;
+    width: 100%;
+    margin-top: 8px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .navbar-nav {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 6px;
+    white-space: nowrap;
+    width: max-content;
+    min-width: 100%;
+    padding-bottom: 4px;
+    scrollbar-width: none;
+  }
+
+  .navbar-collapse::-webkit-scrollbar,
+  .navbar-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .navbar-nav .nav-link {
+    display: block;
+    padding: 6px 9px;
+    font-size: 12px;
+    line-height: 1.2;
+  }
+
+  .navbar-nav .nav-item {
+    flex: 0 0 auto;
+  }
+}
+
 @media (max-width: 1200px) {
   .contact-box {
     max-width: 800px;

@@ -103,10 +103,14 @@
           </div>
         </div>
         
-        <a href="Home.php" class="portal-btn">
-          <i class="fas fa-rocket"></i>
-          Explore Our Services
+        <a href="Home.php" class="portal-btn" aria-label="Go to Home page and explore services">
+          <span class="portal-btn-main">
+            <i class="fas fa-rocket"></i>
+            Explore Our Services
+          </span>
+          <span class="portal-btn-arrow"><i class="fas fa-arrow-right"></i></span>
         </a>
+        <p class="portal-btn-hint">Tap to continue to the Home page</p>
         
         <div class="trust-badges">
           <div class="badge-item">
