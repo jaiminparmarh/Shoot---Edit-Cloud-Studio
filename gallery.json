@@ -234,16 +234,6 @@
         ]
     },
     {
-        "id": 23,
-        "title": "My desk",
-        "type": "video",
-        "url": "uploads/videos/2024_06_06_14_17_IMG_1921-compressed.mp4",
-        "videoCategory": [
-            "cinematic",
-            "insta_reels"
-        ]
-    },
-    {
         "id": 24,
         "title": "karate",
         "type": "photo",
